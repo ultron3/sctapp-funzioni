@@ -1,0 +1,25 @@
+{
+  "name": "salute_con_te_pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gnavi alex ",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^16.0.0",
+    "@azure/cognitiveservices-face": "^5.0.0",
+    "@azure/ms-rest-js": "^2.6.6",
+    "android": "^0.0.8",
+    "angular": "^1.8.3",
+    "face-api.js": "^0.22.2",
+    "ios": "^0.0.1",
+    "pg": "^8.10.0",
+    "pwa": "^1.9.7",
+    "qrcode": "^1.5.3",
+    "uuid": "^9.0.0",
+    "web-bluetooth-utils": "^1.1.1"
+  }
+}

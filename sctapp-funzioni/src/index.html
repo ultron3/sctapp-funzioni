@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="faviconsct.ico" type="image/x-icon">
+ 
+
+    <title>Salute con te-pwa</title>
+</head>
+
+<body>
+    <img src="salutecontelogo.png" alt="" srcset="">
+
+    <h1>Riconoscimento vocale in JavaScript</h1>
+    <p>Per iniziare il riconoscimento vocale, premi il pulsante qui sotto:</p>
+
+   
+
+
+    <button onclick="startRecognition()">Avvia riconoscimento vocale</button>
+    <script src="index.js"></script>
+    <script src="fingerprint.js"></script>
+    <script src="geolocalization.js"></script>
+    <script src="notifiche.js"></script>
+    <script src="voice.js"></script>
+    <script src="js/core.js" async></script>
+    <script src="service-worker.js"></script>
+    <script src="camera.js"></script>
+    <script  type="module" src="qrcode.js"></script>
+   
+  <h1>registrazione audio e generazione codice qr</h1>
+    <li class="special"><a href="registrazione.html">registrazione <audio src=""></audio></a></li>
+   
+
+
+
+    <!--    
+        inserisco il pulsante di prova per la funzione di geolocalizzazione
+    -->
+
+    <h1>Geolocalizzazione</h1>
+	
+	<form>
+		
+		<button type="button" onclick="mostraPosizione()">Mostra posizione</button>
+      
+	</form>
+
+    <h1>Invia un messaggio</h1>
+    <form>
+        <label for="message">Messaggio:</label>
+        <input type="text" id="message" name="message">
+        <br><br>
+        <button type="button" onclick="sendMessage()">Invia</button>
+        
+    </form>
+
+    <h1>Autenticazione fingerprint</h1>
+    <button onclick="authenticateWithFingerprint()" style="background-color: #008CBA; color: white; padding: 10px; border: none; border-radius: 5px;">
+        <i class="fas fa-fingerprint" style="font-size: 24px;"></i> Autenticazione con impronta digitale
+    </button>
+
+
+
+    <h1>Apertura fotocamera</h1>
+    <button onclick="openCamera()">Apri la fotocamera</button>
+    <button onclick="closeCamera()">Chiudi la fotocamera</button>
+    <br>
+    <video id="video" autoplay></video>
+   
+    
+    
+
+
+
+
+
+</body>
+
+</html>

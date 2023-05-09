@@ -1,0 +1,9 @@
+se hai bisogno di utilizzare il Face ID in una pwa, puoi considerare l'utilizzo di tecnologie come WebAuthn (Web Authentication) 
+o FIDO2 (Fast Identity Online) che consentono l'accesso tramite 
+l'autenticazione biometrica (come il Face ID) 
+o l'uso di dispositivi di sicurezza come chiavi USB.
+ Queste tecnologie sono supportate da diversi browser web moderni.
+
+Per utilizzare queste tecnologie, dovresti creare un backend sicuro per gestire l'autenticazione 
+e la registrazione degli utenti e quindi utilizzare JavaScript per interagire con le API del backend. 
+Ci sono diverse librerie e framework disponibili per semplificare l'implementazione di WebAuthn o FIDO2.

@@ -1,0 +1,37 @@
+body{
+    background-color: turquoise;
+}
+
+.li{
+    font-size: xx-large;
+}
+
+  
+
+
+
+input{
+    padding: 10px 20px;
+    width: 300;
+    margin-bottom:20px;
+
+}
+
+button{
+    padding:12px 20px;
+    margin-bottom:20px;
+    border:0;
+    background:#489667;
+    color:black;
+    text-transform: uppercase;
+    font-weight:700;
+    letter-spacing: 2px;
+}
+
+#qr-image{
+    display: none;
+}
+
+img{
+    margin-bottom:20px
+}

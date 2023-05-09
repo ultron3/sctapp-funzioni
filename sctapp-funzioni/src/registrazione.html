@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registrazione vocale</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="med.png" alt="auto">
+    <div id="recording-controls">
+        <button id="start-button">inizia registrazione</button>
+        <button id="stop-button" disabled>fine registrazione</button>
+    </div>
+
+
+    <script>
+        // in totale ci sono 45 righe di codice
+        const startButton = document.getElementById('start-button');
+        const stopButton = document.getElementById('stop-button');
+        let mediaRecorder;
+        let chunks = [];
+
+        startButton.addEventListener('click', () => {//funzione primo pulsante
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.start();
+                    startButton.disabled = true;
+                    stopButton.disabled = false;
+
+                    mediaRecorder.addEventListener('dataavailable', event => {
+                        chunks.push(event.data);
+                    });
+                })
+                .catch(error => {
+                    console.error('Unable to access microphone', error);
+                });
+        });
+
+        stopButton.addEventListener('click', () => {//funzione secondo pulsante con la possibilità di fare il download del file
+            mediaRecorder.stop();
+            startButton.disabled = false;
+            stopButton.disabled = true;
+
+            const audioBlob = new Blob(chunks, { type: 'audio/wav' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            const audio = new Audio(audioUrl);
+            audio.play();
+            chunks = [];
+
+            //da rivedere funzione download
+            const downloadLink = document.createElement('a');
+            downloadLink.href = audioUrl;
+            downloadLink.download = 'prova.wav';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+
+
+
+
+        });
+    </script>
+
+
+
+
+    <div class="container">
+        
+        <input type="text" id="address" placeholder="Inserisci l'indirizzo qui">
+        <button type="button" onclick="generateQR()">
+          genera qr
+
+        </button>
+        <div id="qr-image">
+            <span class="error"></span><br>
+            <img src="" id="img">
+
+
+        </div>
+    </div>
+
+
+
+<script src="qrcode.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

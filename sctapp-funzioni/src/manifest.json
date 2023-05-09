@@ -1,0 +1,34 @@
+{
+    "name": "Salute con te",
+    "short_name": "sctapp",
+    "description": "Il portale per la comuniazione Medico*Paziente",
+    "manifest_version":1,
+    "icons": [
+      {
+        "src": "faviconsct.ico",
+        "sizes": "222x227",
+        "type": "image/ico"
+      },
+      {
+        "src": "favicon.ico",
+        "sizes": "32x32",
+        "type": "image/ico"
+      },
+      {
+        "src": "salutecontelogo.png",
+        "sizes": "222x227",
+        "type": "image/png"
+      },
+      {
+        "src": "med.png",
+        "sizes": "257x196",
+        "type": "image/png"
+      }
+     
+    ],
+    "start_url": "http://127.0.0.1:5500/src/index.html",
+    "display": "fullscreen",
+    "background_color": "#AFEEEE",
+    "theme_color": "#AFEEEE",
+    "orientation": "any"
+  }
